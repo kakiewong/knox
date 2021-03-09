@@ -24,3 +24,21 @@
     position:absolute;
     right: 15px;
 }
+
+.slider > button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    outline: none;
+    border: none;
+    color: #fff;
+}
+
+.slider > button:hover {
+    cursor: pointer;
+}
+
+.slider > button > i {
+    font-size: 20px;
+}
