@@ -1,2 +1,2 @@
-# knox
+# Knox
 A simple budget tracker
