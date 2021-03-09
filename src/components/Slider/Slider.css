@@ -1,0 +1,26 @@
+.slider {
+    width: 20%;
+    height: 55%;
+    position: fixed;
+    background-color: #7FBEEB;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 2px 3px rgba(77, 77, 77, 0.7);
+    color: #fff;
+    text-align: center;
+}
+
+.out {
+    right: 0.5%;
+    transition:  right 1.5s ease-out;
+}
+
+.in {
+    right: -150%;
+    transition: right 1.5s ease-in;
+}
+
+.slider > h1 {
+    position:absolute;
+    right: 15px;
+}
