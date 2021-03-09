@@ -6,7 +6,7 @@ import AddBalance from '../AddBalance/AddBalance'
 function Slider() {
     return (
         <div className='slider out'>
-            <h1>x</h1>
+            <button><i className="im im-x-mark"></i></button>
             <AddTransaction />
         </div>
     )
