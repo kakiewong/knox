@@ -1,0 +1,19 @@
+.budget-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+    margin-top: 2%;
+}
+
+.budget-display > h3 {
+    font-size: 0.9rem;
+    margin-left: 20px;
+}
+
+.budget-display > h1 {
+    margin-top: 5px;
+    font-size: 3.3rem;
+}
