@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import './Slider.css'
 import AddTransaction from '../AddTransaction/AddTransaction'
-import AddBalance from '../AddBalance/AddBalance'
+import { AppContext } from '../../ContextProvider'
+
 
 function Slider() {
+
+    const { toggle, setToggle } = useContext(AppContext)
+
+    const toggleSlider = () => {
+        setToggle(!toggle)
+    }
+
     return (
-        <div className='slider out'>
-            <button><i className="im im-x-mark"></i></button>
+        <div className={toggle ? 'slider out' : 'slider in'}>
+            <button onClick={toggleSlider}><i className="im im-x-mark"></i></button>
             <AddTransaction />
         </div>
     )

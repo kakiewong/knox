@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Header.css';
+import { AppContext } from '../../ContextProvider';
 
 function Header() {
+    const { toggle, setToggle } = useContext(AppContext)
+
+    const toggleSlide = () => {
+        setToggle(!toggle)
+    }
+
     return (
         <div className='nav'>
             <h1 id='title'>KNOX</h1>
-            <div className='btn-container'>
-                <button className='btn'>Add Balance</button>
-                <button className='btn'>Add Expense</button>
-            </div>
+            <button className='btn' onClick={toggleSlide}><i class="im im-plus"></i></button>
         </div>
     )
 }
