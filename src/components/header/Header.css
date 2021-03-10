@@ -13,21 +13,14 @@
     margin-left: 1%;
 }
 
-.btn-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 20%;
-    margin-right: 3%;
-}
-
 .btn {
     outline: none;
     border: none;
     background: none;
-    font-size: 1rem;
+    font-size: 0.7rem;
     color: #fff;
-    margin-bottom: 3px;;
+    margin-bottom: 3px;
+    margin-right: 1%;
 }
 
 .btn:hover {

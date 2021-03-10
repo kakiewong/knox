@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useFormik } from 'formik'
+import { AppContext } from '../../ContextProvider'
 import './AddTransaction.css'
 
 function AddTransaction() {
+
+    const { transactions, setTransactions } = useContext(AppContext)
+
     const formik = useFormik({
         initialValues: {
             amount: '',
@@ -11,13 +15,16 @@ function AddTransaction() {
             date: ''
         },
         onSubmit: values => {
-            console.log(values)
+            setTransactions([
+                values,
+                ...transactions
+            ])
         }
     })
 
     return (
         <div className='form'>
-            <h1>Add Expense</h1>
+            <h1>Add Transaction</h1>
             <form className='form-container' onSubmit={formik.handleSubmit}>
                 <span>
                     <label>Amount:</label>
@@ -49,6 +56,7 @@ function AddTransaction() {
                         onChange={formik.handleChange}
                         value={formik.values.transactionType}
                     >
+                        <option value='addBalance'>Add Balance</option>
                         <option value='food'>Food</option>
                         <option value='gas'>Gas</option>
                         <option value='entertainment'>Entertainment</option>
