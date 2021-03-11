@@ -1,0 +1,28 @@
+.transaction-container {
+    width: 40%;
+    min-width: 350px;
+}
+
+.line-item {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 50px;
+    border-bottom: 1px solid #949494;
+}
+
+.line-item > p {
+    width: 30%;
+    text-align: center;
+}
+
+.line-item > button {
+    border: none;
+    background: none;
+    width: 5%
+}
+
+.line-item > button > i {
+    font-size: 0.6rem;
+    color: red;
+}

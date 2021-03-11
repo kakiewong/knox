@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './App.css';
 import Header from './components/Header/Header'
 import Budget from './components/Budget/Budget'
 import Slider from './components/Slider/Slider'
+import TransactionView from './components/TransactionView/TransactionView'
 import { ContextProvider } from './ContextProvider'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <button>Transactions</button>
             <button>Breakdown</button>
           </div>
+          <TransactionView />
         </div>
       </div>
     </ContextProvider>

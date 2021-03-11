@@ -21,6 +21,12 @@ span > label {
     margin-right: 10px;
 }
 
+.error {
+    margin-right: 15px;
+    font-size: 0.7rem;
+    color: red;
+}
+
 .submit-btn {
     padding: 5px 10px;
     outline: transparent;

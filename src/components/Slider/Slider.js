@@ -1,11 +1,10 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import './Slider.css'
 import AddTransaction from '../AddTransaction/AddTransaction'
 import { AppContext } from '../../ContextProvider'
 
 
 function Slider() {
-
     const { toggle, setToggle } = useContext(AppContext)
 
     const toggleSlider = () => {
