@@ -5,7 +5,6 @@ import { AppContext } from '../../ContextProvider'
 
 
 function Slider() {
-
     const { toggle, setToggle } = useContext(AppContext)
 
     const toggleSlider = () => {
