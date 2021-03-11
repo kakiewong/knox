@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { useFormik } from 'formik'
 import { AppContext } from '../../ContextProvider'
 import './AddTransaction.css'
@@ -27,11 +27,13 @@ function AddTransaction() {
         const errors = {};
         if (!values.amount) {
             errors.amount = '*Required'
-        } else if (!/^\d*\.?\d{2}$/g.test(values.amount)) {
+        } else if (!/^\d*\.?\d{1,2}$/g.test(values.amount)) {
             errors.amount = '*Invalid'
         }
         if (!values.location) {
             errors.location = '*Required'
+        } else if (values.location.length > 15) {
+            errors.location = 'Character limit 15'
         }
         if (values.transactionType === 'none') {
             errors.transactionType = '*Required'
@@ -48,15 +50,19 @@ function AddTransaction() {
             amount: '',
             location: '',
             transactionType: '',
-            date: ''
+            date: '',
         },
         validate,
         onSubmit: values => {
             setTransactions([
-                values,
+                {
+                    ...values,
+                    id: Math.random() * 100
+                },
                 ...transactions
             ])
             updateBudget(values)
+            formik.handleReset()
         }
     })
 
@@ -79,7 +85,7 @@ function AddTransaction() {
                         ? <p className='error'>{formik.errors.amount}</p> : null}
                 </span>
                 <span>
-                    <label>Location:</label>
+                    <label>Source:</label>
                     <input
                         type='text'
                         id='location'
@@ -127,7 +133,10 @@ function AddTransaction() {
                     {formik.errors.date && formik.touched.date
                         ? <p className='error'>{formik.errors.date}</p> : null}
                 </span>
-                <button type='submit' className='submit-btn'>Submit</button>
+                <button
+                    type='submit'
+                    className='submit-btn'>Submit
+                </button>
             </form>
         </div>
     )

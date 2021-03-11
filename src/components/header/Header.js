@@ -12,7 +12,7 @@ function Header() {
     return (
         <div className='nav'>
             <h1 id='title'>KNOX</h1>
-            <button className='btn' onClick={toggleSlide}><i class="im im-plus"></i></button>
+            <button className='btn' onClick={toggleSlide}><i className="im im-plus"></i></button>
         </div>
     )
 }
