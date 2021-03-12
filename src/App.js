@@ -4,6 +4,7 @@ import Header from './components/Header/Header'
 import Budget from './components/Budget/Budget'
 import Slider from './components/Slider/Slider'
 import TransactionView from './components/TransactionView/TransactionView'
+import Breakdown from './components/Breakdown/Breakdown'
 import { ContextProvider } from './ContextProvider'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <button>Breakdown</button>
           </div>
           <TransactionView />
+          <Breakdown />
         </div>
       </div>
     </ContextProvider>

@@ -50,7 +50,7 @@ function AddTransaction() {
             amount: '',
             location: '',
             transactionType: '',
-            date: '',
+            date: ''
         },
         validate,
         onSubmit: values => {
