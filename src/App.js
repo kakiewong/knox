@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './App.css';
 import Header from './components/Header/Header'
 import Budget from './components/Budget/Budget'
 import Slider from './components/Slider/Slider'
-import TransactionView from './components/TransactionView/TransactionView'
-import Breakdown from './components/Breakdown/Breakdown'
+import Main from './components/Main/Main'
 import { ContextProvider } from './ContextProvider'
 
 function App() {
+
   return (
     <ContextProvider>
       <div className="app">
@@ -15,12 +15,7 @@ function App() {
         <Slider />
         <div className='showcase'>
           <Budget />
-          <div className='view-toggle'>
-            <button>Transactions</button>
-            <button>Breakdown</button>
-          </div>
-          <TransactionView />
-          <Breakdown />
+          <Main />
         </div>
       </div>
     </ContextProvider>
