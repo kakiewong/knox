@@ -23,3 +23,12 @@
 .view-toggle > button:hover {
     cursor: pointer;
 }
+
+#defaultMessage {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+    letter-spacing: 1px;
+    font-size: 2rem;
+}

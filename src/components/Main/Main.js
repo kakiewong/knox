@@ -17,7 +17,7 @@ function Main() {
                 <button id='transactionsView' onClick={handleClick}>Transactions</button>
                 <button id='breakdownView' onClick={handleClick}>Breakdown</button>
             </div>
-            {transactions.length === 0 ? <h1>Add a transaction to begin!</h1> :
+            {transactions.length === 0 ? <h1 id='defaultMessage'>Add A Transaction To Begin!</h1> :
                 view === 'transactionsView' ? <TransactionView /> :
                     <Breakdown />
             }
