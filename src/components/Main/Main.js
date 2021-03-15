@@ -12,7 +12,7 @@ function Main() {
         setView(e.target.id)
     }
     return (
-        <div className='showcase'>
+        <div className='main'>
             <div className='view-toggle'>
                 <button id='transactionsView' onClick={handleClick}>Transactions</button>
                 <button id='breakdownView' onClick={handleClick}>Breakdown</button>

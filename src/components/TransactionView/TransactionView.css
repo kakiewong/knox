@@ -26,3 +26,9 @@
     font-size: 0.6rem;
     color: red;
 }
+
+@media(min-width: 416px) and (max-width:800px) {
+    .transaction-container {
+        width: 60%;
+    }
+}

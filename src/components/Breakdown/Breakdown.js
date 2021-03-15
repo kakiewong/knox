@@ -12,7 +12,6 @@ function Breakdown() {
     const entTransactions = transactions.filter(item => item.transactionType === 'entertainment').length
     const otherTransactions = transactions.filter(item => item.transactionType === 'other').length
 
-
     const getPercentage = value => {
         let percent = (value / total) * 100
         return percent
@@ -27,7 +26,7 @@ function Breakdown() {
         }
     }
 
-    const data = [
+    let data = [
         {
             x: getLabel(balanceTransactions, 'Income'),
             y: getPercentage(balanceTransactions)
@@ -51,7 +50,7 @@ function Breakdown() {
     ]
 
     return (
-        <div className='container'>
+        <div className='chart'>
             <VictoryPie
                 data={data}
                 colorScale={['#083D77', '#0FA3B1', '#F4D35E', '#EE964B', '#F95738']}
@@ -59,6 +58,7 @@ function Breakdown() {
                 style={{ labels: { fontSize: '12px' } }}
                 labelComponent={
                     <VictoryLabel
+                        textAnchor='middle'
                         backgroundPadding={14}
                         backgroundStyle={{ fill: 'grey', opacity: 0.5 }}
                     />
