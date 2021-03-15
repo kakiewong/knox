@@ -15,4 +15,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
+}
+
+@media(orientation:landscape) and (max-height:415px) {
+    .app{
+        height: 100vh;
+        background-color: #EDEAD0;
+        font-family: 'Roboto', sans-serif;
+        overflow: scroll;
+    }
+
+    .showcase {
+        position: relative;
+        display: flex;
+        top: 75px;
+        flex-direction: column;
+        align-items: center;
+        height:100vh;
+    }
 }

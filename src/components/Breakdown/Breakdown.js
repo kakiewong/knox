@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { VictoryPie } from 'victory'
+import { VictoryLabel, VictoryPie } from 'victory'
 import './Breakdown.css'
 import { AppContext } from '../../ContextProvider'
 
@@ -12,27 +12,21 @@ function Breakdown() {
     const entTransactions = transactions.filter(item => item.transactionType === 'entertainment').length
     const otherTransactions = transactions.filter(item => item.transactionType === 'other').length
 
-
-
     const getPercentage = value => {
-        if (!value) {
-            return;
-        } else {
-            let percent = (value / total) * 100
-            return (`${percent.toFixed(2)}%`)
-        }
+        let percent = (value / total) * 100
+        return percent
     }
 
     const getLabel = (value, label) => {
         if (!value) {
             return null
         } else {
-            return label
+            let percent = getPercentage(value)
+            return (label + ' ' + `${percent.toFixed(2)}%`)
         }
     }
 
-
-    const data = [
+    let data = [
         {
             x: getLabel(balanceTransactions, 'Income'),
             y: getPercentage(balanceTransactions)
@@ -54,13 +48,21 @@ function Breakdown() {
             y: getPercentage(otherTransactions)
         },
     ]
+
     return (
-        <div className='container'>
+        <div className='chart'>
             <VictoryPie
                 data={data}
-                innerRadius={110}
                 colorScale={['#083D77', '#0FA3B1', '#F4D35E', '#EE964B', '#F95738']}
-                labels={({ datum }) => [datum.x, datum.y]}
+                labels={({ datum }) => datum.x}
+                style={{ labels: { fontSize: '12px' } }}
+                labelComponent={
+                    <VictoryLabel
+                        textAnchor='middle'
+                        backgroundPadding={14}
+                        backgroundStyle={{ fill: 'grey', opacity: 0.5 }}
+                    />
+                }
             />
         </div>
     )

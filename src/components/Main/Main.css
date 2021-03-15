@@ -1,4 +1,4 @@
-.showcase {
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,4 +22,24 @@
 
 .view-toggle > button:hover {
     cursor: pointer;
+}
+
+#defaultMessage {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+    letter-spacing: 1px;
+    font-size: 2rem;
+}
+
+@media(max-width: 415px){
+    #defaultMessage {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 75px;
+        letter-spacing: 1px;
+        font-size: 1.5rem;
+    }
 }
