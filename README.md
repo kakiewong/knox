@@ -1,3 +1,3 @@
 # Knox
 A simple budget tracker
-![Knox Landing](https://ibb.co/3YzSCQB)
+![Knox Landing](https://i.ibb.co/84cP7t6/knox-desktop-view.png)
