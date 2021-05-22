@@ -5,5 +5,5 @@ This project utilizes CRUD operations to build a user-friendly expense tracking 
 ## Landing Page
 <img src="https://i.ibb.co/84cP7t6/knox-desktop-view.png" width="500"/>
 ## Mobile View
-<img src="https://i.ibb.co/F8GRF1n/knox-form-validation.png" />
+<img src="https://i.ibb.co/F8GRF1n/knox-form-validation.png" width="500"/>
 
