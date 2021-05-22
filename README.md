@@ -1,5 +1,4 @@
 # Knox
 A simple budget tracker
-<br>
-hello
-![Knox Landing](https://i.ibb.co/84cP7t6/knox-desktop-view.png)
+<img src="https://i.ibb.co/84cP7t6/knox-desktop-view.png"/>
+
